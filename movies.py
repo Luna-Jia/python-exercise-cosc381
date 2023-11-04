@@ -34,6 +34,19 @@ class Movies:
             print("Cast: " + ", ".join(movie['cast']))
             print()  # For readability
     
+    def search_movie_names(self, search_term):
+        # Make the search case-insensitive
+        search_term = search_term.lower()
+        found_movies = [movie['name'] for movie in self._movies if search_term in movie['name'].lower()]
+        
+        if found_movies:
+            print(f"Movies containing '{search_term}':")
+            for movie in found_movies:
+                print(movie)
+        else:
+            print(f"No movies found with the term '{search_term}' in their names.")
+
+    
     
     
 
