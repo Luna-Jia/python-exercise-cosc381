@@ -28,6 +28,16 @@ class Movies:
                     'cast': movie_cast
                 }
             )
+    def list_movies_and_cast(self):
+        for movie in self._movies:
+            print(f"Movie: {movie['name']}")
+            print("Cast: " + ", ".join(movie['cast']))
+            print()  # For readability
+    
+    
+    
 
 if __name__ == "__main__":
     movies = Movies('./movies.txt')
+
+    

@@ -8,7 +8,7 @@ def main():
         print("sn: search movie names")
         print("sc: search cast")
         print("list: print all the movie names")
-        option = input()
+        option = input("Choose an option: ")
 
         if(option == 'q'):break
         elif (option == "sn"):
@@ -16,7 +16,7 @@ def main():
         elif (option == "sc"):
             cast = input("Enter a search term:")
         elif (option == "list"):
-            print ("hello")
+            movies.list_movies_and_cast()
         else:
             print("q: quit")
             print("sn: search movie names")
