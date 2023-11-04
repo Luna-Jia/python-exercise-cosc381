@@ -1,8 +1,9 @@
 from movies import Movies
 
-movies = Movies('./movies.txt')
+
 
 def main():
+    movies = Movies('./movies.txt')
     while True:
         print("q: quit")
         print("sn: search movie names")
@@ -13,6 +14,7 @@ def main():
         if(option == 'q'):break
         elif (option == "sn"):
             name = input("Enter a search term:")
+            movies.search_movie_names(name)
         elif (option == "sc"):
             cast = input("Enter a search term:")
         elif (option == "list"):
