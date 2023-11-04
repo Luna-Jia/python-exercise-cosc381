@@ -17,6 +17,7 @@ def main():
             movies.search_movie_names(name)
         elif (option == "sc"):
             cast = input("Enter a search term:")
+            movies.search_movie_cast(cast)
         elif (option == "list"):
             movies.list_movies_and_cast()
         else:
